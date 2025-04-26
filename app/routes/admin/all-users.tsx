@@ -1,10 +1,15 @@
+import { Header } from 'components'
 import React from 'react'
 
 const AllUsers = () => {
   return (
-    <div>
-      Users Tables
-    </div>
+    <main className='dashboard wrapper'>
+        <Header 
+            title="Trips Page"
+            description =" Check our current users"
+        />
+        Dashboard Page Contents
+    </main>
   )
 }
 
