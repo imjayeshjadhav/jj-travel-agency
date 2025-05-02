@@ -8,8 +8,7 @@ const Trips = () => {
             title="Trips"
             description ="View and edit AI gennerated travel plans"
             ctaText="Create a Trip"
-            ctaUrl ="/trips/create"
-            
+            ctaUrl ="/trips/create"  
         />
     </main>
   )
