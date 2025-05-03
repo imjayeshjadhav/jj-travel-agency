@@ -19,7 +19,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     const unsplashApiKey = process.env.UNSPLASH_ACCESS_KEY!;
 
     try {
-        const prompt = `Generate a ${numberOfDays}-day travel itinerary for ${country} based on the following user information:
+        const prompt = `Generate a ${numberOfDays}-day travel itinerary for ${country} based on the following user information and the budget should be in indian currency of Rupees:
         Budget: '${budget}'
         Interests: '${interests}'
         TravelStyle: '${travelStyle}'
