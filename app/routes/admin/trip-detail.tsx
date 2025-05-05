@@ -16,9 +16,9 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
     return {
         trip,
-        allTrips: trips.allTrips.map(({ $id, tripDetails, imageUrls }) => ({
+        allTrips: trips.allTrips.map(({ $id, tripDetail, imageUrls }) => ({
             id: $id,
-            ...parseTripData(tripDetails),
+            ...parseTripData(tripDetail),
             imageUrls: imageUrls ?? []
         }))
     }
@@ -152,22 +152,22 @@ const TripDetail = ({loaderData}:Route.ComponentProps) => {
           </section>
         ))}
       </section>
-      <section className='flex flex-col gap-6'>
+      {/* <section className='flex flex-col gap-6'>
         <h2 className='p-24-semibold text-dark-100'>Popular Trips</h2>
         <div className="trip-grid">
           {allTrips.map((trip) => (
-              <TripCard
-                  key={trip.id}
-                  id={trip.id}
-                  name={trip.name}
-                  imageUrl={trip.imageUrls[0]}
-                  location={trip.itinerary?.[0]?.location ?? ""}
-                  tags={[trip.interests, trip.travelStyle]}
-                  price={trip.estimatedPrice}
-              />
+            <TripCard
+                key={trip.id}
+                id={trip.id}
+                name={trip.name}
+                imageUrl={trip.imageUrls[0]}
+                location={trip.itinerary?.[0]?.location ?? ""}
+                tags={[trip.interests, trip.travelStyle]}
+                price={trip.estimatedPrice}
+            />
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }
