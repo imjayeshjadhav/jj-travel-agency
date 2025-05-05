@@ -36,7 +36,7 @@ export const clientLoader = async () => {
   const mappedUsers : UsersItineraryCount[] = allUsers.users.map((user)=>({
     imageUrl:user.imageUrl,
     name:user.name,
-    count: user.itineraryCount ?? Math.floor(Math.random()) ,
+    count: user.itineraryCount ?? Math.floor(Math.random()*10) ,
 
   }))
 
